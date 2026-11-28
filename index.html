@@ -1,0 +1,293 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DataForge | Excel to Database</title>
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Outfit:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="background-glow glow-one"></div>
+    <div class="background-glow glow-two"></div>
+
+    <div class="app-container">
+
+        <!-- Sidebar -->
+        <aside class="sidebar">
+
+            <div class="brand">
+                <div class="brand-icon">D</div>
+                <div>
+                    <h2>DataForge</h2>
+                    <p>DATABASE STUDIO</p>
+                </div>
+            </div>
+
+            <div class="sidebar-label">WORKSPACE</div>
+
+            <nav class="navigation">
+                <a href="#" class="nav-item active">
+                    <span class="nav-icon">▦</span>
+                    Dashboard
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">▤</span>
+                    My Tables
+                </a>
+
+                <a href="#" class="nav-item">
+                    <span class="nav-icon">↻</span>
+                    Import History
+                </a>
+            </nav>
+
+            <div class="sidebar-bottom">
+                <div class="help-card">
+                    <div class="help-icon">✦</div>
+                    <h3>Need help?</h3>
+                    <p>Learn how to import your Excel data into a database.</p>
+                    <a href="#">View guide ↗</a>
+                </div>
+
+                <div class="sidebar-footer">
+                    <span class="status-dot"></span>
+                    System ready
+                </div>
+            </div>
+
+        </aside>
+
+
+        <!-- Main Content -->
+        <main class="main-content">
+
+            <!-- Topbar -->
+            <header class="topbar">
+                <div class="breadcrumb">
+                    Workspace <span>/</span> <strong>Create Table</strong>
+                </div>
+
+                <div class="topbar-right">
+                    <div class="connection-status">
+                        <span class="status-dot"></span>
+                        Database connected
+                    </div>
+
+                    <div class="profile">
+                        <div class="profile-avatar">U</div>
+                        <span>My Workspace</span>
+                    </div>
+                </div>
+            </header>
+
+
+            <!-- Page Heading -->
+            <section class="page-heading">
+                <div>
+                    <div class="eyebrow">
+                        <span class="eyebrow-line"></span>
+                        DATA MANAGEMENT
+                    </div>
+
+                    <h1>Turn your Excel data<br>
+                        into <span>database tables.</span>
+                    </h1>
+
+                    <p class="page-description">
+                        No complicated SQL queries. Just paste your spreadsheet,
+                        name your table, and let DataForge do the work.
+                    </p>
+                </div>
+
+                <div class="heading-decoration">
+                    <div class="decoration-circle circle-one"></div>
+                    <div class="decoration-circle circle-two"></div>
+                    <div class="decoration-icon">▤</div>
+                </div>
+            </section>
+
+
+            <!-- Main Import Card -->
+            <section class="import-card">
+
+                <div class="card-header">
+                    <div>
+                        <div class="step-label">
+                            <span>01</span> CREATE NEW TABLE
+                        </div>
+
+                        <h2>Import your spreadsheet</h2>
+
+                        <p>Provide a table name and paste your Excel data below.</p>
+                    </div>
+
+                    <div class="excel-badge">
+                        <span class="excel-icon">X</span>
+                        EXCEL IMPORT
+                    </div>
+                </div>
+
+
+                <!-- Table Name -->
+                <div class="form-section">
+
+                    <label for="tableName">
+                        Table name
+                        <span class="required">*</span>
+                    </label>
+
+                    <p class="field-description">
+                        Choose a unique name for your new database table.
+                    </p>
+
+                    <div class="input-wrapper">
+                        <span class="input-icon">▦</span>
+
+                        <input
+                            type="text"
+                            id="tableName"
+                            placeholder="e.g. Student_Records"
+                        >
+
+                        <span class="input-hint">TABLE NAME</span>
+                    </div>
+
+                </div>
+
+
+                <!-- Excel Paste Area -->
+                <div class="form-section">
+
+                    <div class="paste-heading">
+                        <div>
+                            <label for="excelData">
+                                Spreadsheet data
+                                <span class="required">*</span>
+                            </label>
+
+                            <p class="field-description">
+                                Copy your cells from Excel and paste them here.
+                            </p>
+                        </div>
+
+                        <span class="paste-format">TABULAR DATA</span>
+                    </div>
+
+
+                    <div class="textarea-wrapper">
+
+                        <div class="textarea-top">
+                            <div class="window-dots">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </div>
+
+                            <span>PASTE YOUR DATA BELOW</span>
+                            <span class="paste-symbol">⌘ V</span>
+                        </div>
+
+                        <textarea
+                            id="excelData"
+                            placeholder="Paste your Excel data here...
+
+Name       Roll_No       Department
+Rahul      101           Computer
+Priya      102           IT
+Amit       103           Computer
+
+Tip: Copy the entire table from Excel, including the header row."
+                        ></textarea>
+
+                        <div class="textarea-footer">
+                            <span>↳ First row will be used as column names</span>
+                            <span>Excel / TSV format</span>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <!-- Information -->
+                <div class="info-banner">
+                    <div class="info-icon">i</div>
+
+                    <div>
+                        <strong>Before you create your table</strong>
+                        <p>
+                            Make sure your first row contains unique column names
+                            and your data is arranged in rows and columns.
+                        </p>
+                    </div>
+                </div>
+
+
+                <!-- Create Button -->
+                <div class="card-footer">
+
+                    <p class="footer-note">
+                        <span>✦</span>
+                        Your data will be organized into a new database table.
+                    </p>
+
+                    <button type="button" class="create-button">
+                        <span>＋</span>
+                        Create Table
+                        <span class="button-arrow">→</span>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- Bottom Feature Cards -->
+            <section class="feature-section">
+
+                <div class="feature-card">
+                    <div class="feature-icon blue-icon">▤</div>
+                    <div>
+                        <h3>Easy Import</h3>
+                        <p>Paste data directly from Excel.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon purple-icon">⌘</div>
+                    <div>
+                        <h3>Automatic Structure</h3>
+                        <p>Column names are detected automatically.</p>
+                    </div>
+                </div>
+
+                <div class="feature-card">
+                    <div class="feature-icon green-icon">◈</div>
+                    <div>
+                        <h3>Database Ready</h3>
+                        <p>Organize your data into database tables.</p>
+                    </div>
+                </div>
+
+            </section>
+
+
+            <footer class="main-footer">
+                <span>© 2026 DataForge</span>
+                <span>Built for smarter data management.</span>
+            </footer>
+
+        </main>
+
+    </div>
+
+</body>
+</html>
